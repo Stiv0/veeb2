@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @SpringBootApplication
 public class Rakendus {
-	@RequestMapping("/geomeetrilineKeskmine)
+	@RequestMapping("/geomeetrilineKeskmine")
 	String gk(String arv1, String arv2){
 		if(arv1 == null){
 			return "Andmed puuduvad";
 		}
-		int a1 = Integer.praseInt(arv1);
-		int a2 = Integer.praseInt(arv2);
+		int a1 = Integer.parseInt(arv1);
+		int a2 = Integer.parseInt(arv2);
 		return arv1 +" ja "+ arv2 +" geomeetriline keskmine on "+ Math.sqrt(a1*a2);
 	}
 	
