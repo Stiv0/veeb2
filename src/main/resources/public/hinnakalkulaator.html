@@ -8,7 +8,7 @@
 			function arvutamine(){
 				var kogus = document.getElementById("kogus").value;
 				var kaart = document.getElementById("kaart").value;
-				var aadress = "/hinnaKalk?kogus="+ kogus +"&kaart="+ kaart;
+				var aadress = "/hinnaKalk?kogus="+ kogus +"&kaartOlemas="+ kaart;
 				yhendus.open("GET", aadress, true);
 				yhendus.send();
 			}

@@ -38,7 +38,7 @@ public class Rakendus {
 			return "Andmed puuduvad";
 		}
 		int kogus = Integer.parseInt(arv1);
-		int kaart = Integer.parseInt(kaart);
+		int kaartOlemas = Integer.parseInt(kaart);
 		int hind;
 		int kokku;
 		if(kogus>5){
@@ -48,10 +48,10 @@ public class Rakendus {
 			hind = 3;
 			kokku = kogus*hind;
 		}
-		if(kaart == 1){
+		if(kaartOlemas == 1){
 			kokku = kokku*0.8;
 		}
-		return "Kliendi kaart: "+ kaart +"\nKogus on: "+ arv1 +"\nKokku on hind: "+ kokku;
+		return "Kliendi kaart: "+ kaartOlemas +"\nKogus on: "+ arv1 +"\nKokku on hind: "+ kokku;
 	}
 
 	
