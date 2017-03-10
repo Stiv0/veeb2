@@ -40,7 +40,7 @@ public class Rakendus {
 		int kogus = Integer.parseInt(arv1);
 		int kaartOlemas = Integer.parseInt(kaart);
 		int hind;
-		int kokku;
+		double kokku;
 		if(kogus>5){
 			hind = 2;
 			kokku = kogus*hind;
