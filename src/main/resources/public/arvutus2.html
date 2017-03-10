@@ -8,7 +8,7 @@
 			function arvutamine(){
 				var a1 = document.getElementById("kast1").value;
 				var a2 = document.getElementById("kast2").value;
-				var aadress = "/geomeetrilineKeskmine?arv1="+ a1 +"&arv2="+ a2;
+				var aadress = "/geomeetrilineKeskmine3?arv1="+ a1 +"&arv2="+ a2 + "&arv3="+ a3;
 				yhendus.open("GET", aadress, true);
 				yhendus.send();
 			}
@@ -20,6 +20,7 @@
 	<body>
 		<input type="number" id="kast1">
 		<input type="number" id="kast2">
+		<input type="number" id="kast3">
 		<input type="button" value="Leia geomeetriline keskmine" onclick="arvutamine()">
 		<div id="vastus">
 			Vastuse koht
