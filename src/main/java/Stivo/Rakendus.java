@@ -18,7 +18,7 @@ public class Rakendus {
 	}
 	
 	@RequestMapping("/geomeetrilineKeskmine3")
-	String gk3(String arv1, String arv2){
+	String gk3(String arv1, String arv2, String arv3){
 		if(arv1 == null){
 			return "Andmed puuduvad";
 		}
