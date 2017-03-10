@@ -27,6 +27,39 @@ public class Rakendus {
 		int a3 = Integer.parseInt(arv3);
 		return arv1 +", "+ arv2 +" ja "+ arv3 +" geomeetriline keskmine on "+ Math.pow(a1*a2*a3, (1.0/3));
 	}
+	
+	
+	
+	
+	
+	@RequestMapping("/hinnaKalk")
+	String hk(String arv1, String kaart){
+		if(arv1 == null){
+			return "Andmed puuduvad";
+		}
+		int kogus = Integer.parseInt(arv1);
+		int kaart = Integer.parseInt(kaart);
+		int hind;
+		int kokku;
+		if(kogus>5){
+			hind = 2;
+			kokku = kogus*hind;
+		} else{
+			hind = 3;
+			kokku = kogus*hind;
+		}
+		if(kaart == 1){
+			kokku = kokku*0.8;
+		}
+		return "Kliendi kaart: "+ kaart +"\nKogus on: "+ arv1 +"\nKokku on hind: "+ kokku;
+	}
+
+	
+	
+	
+	
+	
+	
 
 	@RequestMapping("/algus")
     String tervitusfunktsioon() {
